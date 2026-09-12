@@ -19,7 +19,7 @@ query Orders($first: Int!, $after: String, $query: String) {
       totalDiscountsSet { shopMoney { amount currencyCode } }
       customer { displayName email phone }
       email phone
-      shippingAddress { name address1 address2 city province zip country }
+      shippingAddress { name address1 address2 city province zip country phone }
       note
       tags
       lineItems(first: 50) { nodes { title quantity } }
@@ -228,4 +228,6 @@ function App() {
   );
 }
 
-render(<App />, document.body);
+export default async () => {
+  render(<App />, document.body);
+};
