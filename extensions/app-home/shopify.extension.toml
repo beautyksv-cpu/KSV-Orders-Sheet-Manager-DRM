@@ -3,7 +3,6 @@ api_version = "2026-07"
 [[extensions]]
 name = "Orders Sheet"
 handle = "orders-sheet"
-uid = "8c4a4a8f-2f20-4e0d-8e0e-ksvordersheet01"
 type = "ui_extension"
 
 [[extensions.targeting]]
