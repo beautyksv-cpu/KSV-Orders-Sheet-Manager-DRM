@@ -1,5 +1,6 @@
 name = "KSV Orders Sheet Manager DRM"
 client_id = "497781ec8fd2691747d174ff4dccde05"
+handle = "ksv-orders-sheet-manager-drm"
 application_url = "https://shopify.dev/apps/default-app-home"
 embedded = true
 extension_directories = ["extensions/"]
