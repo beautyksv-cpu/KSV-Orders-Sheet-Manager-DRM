@@ -1,0 +1,12 @@
+{
+  "name": "ksv-orders-sheet-app-home",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@shopify/ui-extensions": "latest",
+    "preact": "latest"
+  }
+}
