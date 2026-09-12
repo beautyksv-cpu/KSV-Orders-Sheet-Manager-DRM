@@ -1,8 +1,8 @@
 api_version = "2026-07"
 
 [[extensions]]
-name = "Orders Sheet"
-handle = "orders-sheet"
+name = "App Home"
+handle = "app-home"
 uid = "8c5b2e9a-7f41-4d63-b2c8-91a6e4f7305d"
 type = "ui_extension"
 
