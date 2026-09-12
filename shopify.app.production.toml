@@ -17,3 +17,4 @@ redirect_urls = ["https://shopify.dev/apps/default-app-home/api/auth"]
 
 [build]
 automatically_update_urls_on_dev = true
+include_config_on_deploy = true
