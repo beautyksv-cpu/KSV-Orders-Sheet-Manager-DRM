@@ -1,18 +1,12 @@
 name = "KSV Orders Sheet Manager DRM"
 client_id = "497781ec8fd2691747d174ff4dccde05"
-application_url = "https://REPLACE_WITH_APP_URL"
+application_url = "https://shopify.dev/apps/default-app-home"
 embedded = true
+extension_directories = ["extensions/"]
 
 [access_scopes]
-scopes = "read_orders,read_customers"
-
-[auth]
-redirect_urls = [
-  "https://REPLACE_WITH_APP_URL/auth/callback"
-]
-
-[webhooks]
-api_version = "2026-07"
+scopes = "read_orders,write_orders,read_customers"
+optional_scopes = ["read_all_orders"]
 
 [build]
 automatically_update_urls_on_dev = true
