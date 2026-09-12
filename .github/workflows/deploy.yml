@@ -9,10 +9,17 @@ on:
 permissions:
   contents: read
 
+# Keep production deployments serialized. If several commits arrive quickly,
+# the newest deployment supersedes an older queued/in-progress deployment.
+concurrency:
+  group: shopify-production-deploy
+  cancel-in-progress: true
+
 jobs:
   deploy:
     name: Deploy Shopify app
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout
@@ -22,11 +29,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
+          cache: npm
 
       - name: Install Shopify CLI
         run: npm install -g @shopify/cli@latest
 
-      - name: Deploy to Shopify
+      - name: Verify Shopify CLI
+        run: shopify version
+
+      - name: Deploy to Shopify production
         env:
           SHOPIFY_APP_AUTOMATION_TOKEN: ${{ secrets.SHOPIFY_APP_AUTOMATION_TOKEN }}
           COMMIT_URL: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}
