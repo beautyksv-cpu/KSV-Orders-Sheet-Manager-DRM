@@ -12,3 +12,6 @@ target = "admin.app.home.render"
 
 [extensions.capabilities]
 api_access = true
+
+[access_scopes]
+scopes = "read_orders,write_orders,read_customers,write_metaobject_definitions,write_metaobjects"
