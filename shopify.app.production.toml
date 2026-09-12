@@ -8,5 +8,11 @@ extension_directories = ["extensions/"]
 scopes = "read_orders,write_orders,read_customers"
 optional_scopes = ["read_all_orders"]
 
+[webhooks]
+api_version = "2026-07"
+
+[auth]
+redirect_urls = ["https://shopify.dev/apps/default-app-home/api/auth"]
+
 [build]
 automatically_update_urls_on_dev = true
